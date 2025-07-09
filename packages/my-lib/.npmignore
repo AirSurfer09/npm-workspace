@@ -1,0 +1,78 @@
+# Examples
+examples/
+../../examples/
+
+# Development files
+*.ts
+!*.d.ts
+!*.d.mts
+tsconfig.json
+tsconfig.build.json
+tsup.config.ts
+
+# Source files (only include built files)
+src/
+
+# Development dependencies
+node_modules/
+
+# Build tools
+.eslintrc.js
+.prettierrc.js
+.prettierignore
+
+# Git files
+.git/
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test files
+__tests__/
+*.test.*
+*.spec.*
+
+# Coverage
+coverage/
+*.lcov
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Documentation (keep README.md)
+docs/
+*.md
+!README.md
+
+# CI/CD
+.github/
+.github/workflows/
+
+# Changesets
+.changeset/
+
+# Husky
+.husky/
+
+# Root workspace files
+../../package.json
+../../pnpm-workspace.yaml
+../../pnpm-lock.yaml
+../../tsconfig.json
+../../.eslintrc.js
+../../.prettierrc.js
+../../.prettierignore
+../../.gitignore
+../../setup.sh 

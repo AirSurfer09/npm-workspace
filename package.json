@@ -1,0 +1,46 @@
+{
+  "name": "npm-package-template",
+  "version": "1.0.0",
+  "description": "A template for creating npm packages with ESM and UMD builds",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter '*' run build",
+    "dev": "pnpm --filter '*' run dev",
+    "test": "pnpm --filter '*' run test",
+    "lint": "eslint --ext .ts,.tsx --fix packages/*/src",
+    "format": "prettier --write \"packages/*/src/**/*.{ts,tsx,json,md}\"",
+    "typecheck": "pnpm --filter '*' run typecheck",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3",
+    "vite": "^5.4.19"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
+  "packageManager": "pnpm@8.15.0"
+} 

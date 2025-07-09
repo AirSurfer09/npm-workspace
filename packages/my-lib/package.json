@@ -1,0 +1,57 @@
+{
+  "name": "my-lib",
+  "version": "0.1.0",
+  "description": "A modular library with core utilities, React components, and vanilla TypeScript components",
+  "main": "dist/types/index.js",
+  "module": "dist/types/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.mjs",
+      "require": "./dist/types/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.mts",
+      "import": "./dist/react/index.mjs"
+    },
+    "./vanilla": {
+      "types": "./dist/vanilla/index.d.mts",
+      "import": "./dist/vanilla/index.mjs",
+      "browser": "./dist/vanilla/index.global.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup && tsc -p tsconfig.build.json",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.22",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "vanilla",
+    "components",
+    "hooks",
+    "utilities"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT"
+} 
